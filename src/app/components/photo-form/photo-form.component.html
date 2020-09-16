@@ -1,0 +1,28 @@
+<div class="col-lg-4 mx-auto">
+	<div class="card">
+		<div class="card-header">
+			Subir Imagen
+		</div>
+		<div class="card-body">
+			<form 
+			  [formGroup]="photoForm" 
+			  (ngSubmit)="onPhotoFormSubmit(photoForm.value)"
+			>
+				<div class="form-group">
+					<input type="text" formControlName="title" class="form-control" placeholder="Titulo" required>
+				</div>				
+				<div class="form-group">
+					<textarea rows="3" formControlName="description" placeholder="Descripción" class="form-control" required></textarea>
+				</div>
+
+				<input type="file" class="d-none" (change)="onPhotoSelected($event)" #imageInput>
+
+				<img [src]="photoSelected || 'assets/no-imagen.png'" class="img-fluid" (click)="imageInput.click()">
+
+				<button class="btn btn-primary btn-block">
+					Subir
+				</button>
+			</form>
+		</div>
+	</div>
+</div>

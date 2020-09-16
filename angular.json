@@ -24,6 +24,8 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootswatch/dist/materia/bootstrap.min.css",
+              "node_modules/ngx-toastr/toastr.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -119,6 +121,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "angular-imagenes"
+    }
+  },
+  "defaultProject": "angular-imagenes",
+  "cli": {
+    "analytics": "746f9af6-d735-4af5-8b9f-648fd0b3012a"
+  }
 }
